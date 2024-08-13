@@ -53,3 +53,168 @@ nav ul li a{
   text-decoration: none;
   color: aliceblue;
 }
+/* .header-text{
+  margin-top:25%;
+  font-size: 25px;
+  margin-left: 450px;
+  
+}
+.header-text h1{
+  font-size:50px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.header-text p{
+  text-decoration:underline ;
+  color:#4eff45
+} */
+ /* Basic Styles for Header Text */
+/* Basic Styles for Header Text */
+.header-text {
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 200px;
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+  background-color: rgba(34, 34, 34, 0.3); /* Dark background with 30% opacity */
+  color: #ffffff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+}
+
+/* Web Developer Text */
+.header-text p {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0; /* Set opacity to 100% */
+  transform: translateY(10px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+  text-decoration: underline;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/* Name and Location Text */
+.header-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  opacity: 0; /* Set opacity to 100% */
+  transform: translateY(10px);
+  animation: shine 3s linear infinite, fadeInUp 2s forwards;
+  animation-delay: 0.5s;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, #f0f, #0ff, #f0f);
+  background-size: 200% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/* Fade in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(-200px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Fade in Up Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateX(200px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% {
+      background-position: 0% center;
+  }
+  50% {
+      background-position: 50% center;
+  }
+  100% {
+      background-position: 100% center;
+  }
+}
+
+/* Hover Effect for Header Text */
+.header-text:hover {
+  background-color: rgba(34, 34, 34, 0.5); /* Slightly lighter background on hover */
+  transform: scale(1.02); /* Slightly scale up the container on hover */
+}
+.header-text h1 span{
+  color:#fcce01;
+}
+#about{
+  padding: 80px 0;
+  color: #ababab;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1{
+  flex-basis: 35%;
+}
+.about-col-1 img{
+  width:100%;
+  border-radius: 15px; 
+  border: #0ff solid;
+}
+.about-col-2{
+  flex-basis: 60%;
+}
+.sub-title{
+  font-size:60px;
+  font-weight: 600;
+  color: #fff;
+
+}
+.tab-title{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width:0;
+  height: 3px;
+  background: #ff004f;
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  transition: 0.5px;
+}
+.tab-links.active-link::after{
+  width:50%;
+}
+.tab-contents ul li{
+  list-style: none;
+  margin:10px 0;
+}
+.tab-contents ul li span{
+  color:#ff004f;
+  font-size: 14px;
+}
