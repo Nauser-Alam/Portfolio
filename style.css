@@ -218,3 +218,9 @@ nav ul li a{
   color:#ff004f;
   font-size: 14px;
 }
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+ display:block;
+}

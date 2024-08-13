@@ -38,11 +38,25 @@
             <h1 class="sub-title">About Me</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus error in molestias sed unde ipsa nam beatae architecto quibusdam a quam molestiae, amet dolores ea voluptatibus nisi! Officia, a.</p>
             <div class="tab-title">
-              <p class="tab-links active-links">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents active-tab" id="skills" >
+              <ul>
+                <li><span>web development</span><br>web application development</li>
+                <li><span>web development</span><br>web application development</li>
+                <li><span>web development</span><br>web application development</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>web development</span><br>web application development</li>
+                <li><span>web development</span><br>web application development</li>
+                <li><span>web development</span><br>web application development</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
               <ul>
                 <li><span>web development</span><br>web application development</li>
                 <li><span>web development</span><br>web application development</li>
