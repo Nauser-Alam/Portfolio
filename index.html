@@ -98,6 +98,34 @@
       </div>
     </div>
  </div>
+<!-- ********************  My works  **************  -->
+<section id="projects">
+  <h2>My Projects/Works</h2>
+  <div class="project-slider">
+      <div class="project-item" onclick="openPopup('video1')">
+          <img src="thumbnail1.jpg" alt="Project 1">
+          <p>Project 1 Description</p>
+      </div>
+      <div class="project-item" onclick="openPopup('video2')">
+          <img src="thumbnail2.jpg" alt="Project 2">
+          <p>Project 2 Description</p>
+      </div>
+      <div class="project-item" onclick="openPopup('video3')">
+          <img src="thumbnail3.jpg" alt="Project 3">
+          <p>Project 3 Description</p>
+      </div>
+      <!-- Add more project items as needed -->
+  </div>
+</section>
 
+<div id="video-popup" class="popup">
+  <span class="close-btn" onclick="closePopup()">&times;</span>
+  <div class="video-container">
+      <video id="video1" src="video1.mp4" controls></video>
+      <video id="video2" src="video2.mp4" controls></video>
+      <video id="video3" src="video3.mp4" controls></video>
+      <!-- Add more videos as needed -->
+  </div>
+</div>
   <script src="script.js"></script>
 </body>
