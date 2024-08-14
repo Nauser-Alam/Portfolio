@@ -51,3 +51,37 @@ function closePopup() {
       video.currentTime = 0;
   });
 }
+// ******************** Achievement and certificate section****************
+// script.js
+
+function openModal(certId) {
+  const modal = document.getElementById('certificate-modal');
+  const certificates = document.querySelectorAll('.modal-content img');
+
+  // Hide all certificates
+  certificates.forEach(cert => {
+      cert.style.display = 'none';
+  });
+
+  // Show the selected certificate
+  const selectedCert = document.getElementById(certId);
+  if (selectedCert) {
+      selectedCert.style.display = 'block';
+  }
+
+  // Show the modal
+  modal.style.display = 'flex';
+}
+
+function closeModal() {
+  const modal = document.getElementById('certificate-modal');
+  const certificates = document.querySelectorAll('.modal-content img');
+
+  // Hide the modal
+  modal.style.display = 'none';
+
+  // Hide all certificates
+  certificates.forEach(cert => {
+      cert.style.display = 'none';
+  });
+}
