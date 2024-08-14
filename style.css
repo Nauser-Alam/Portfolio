@@ -14,7 +14,7 @@ body{
 #header{
   width:100%;
   height:100vh;
-  background-image: url(images/bk1.png);
+  background-image: url(images/green.png);
   background-size: cover;
   background-position: right;
 }
@@ -76,7 +76,7 @@ nav ul li a{
 .header-text {
   text-align: center;
   margin-top: 20%;
-  margin-left: 200px;
+
   position: relative;
   overflow: hidden;
   padding: 50px 0;
@@ -184,12 +184,19 @@ nav ul li a{
   flex-basis: 60%;
 }
 .sub-title{
-  font-size:50px;
+  font-size:40px;
   font-weight: 400;
   color: #fff;
   font-family:'Times New Roman', Times, serif;
   text-decoration: underline;
 
+}
+#sub-title1{
+  font-size:40px;
+  font-weight: 400;
+  color: #fff;
+  font-family:'Times New Roman', Times, serif;
+  text-decoration: underline;
 }
 .tab-title{
   display: flex;
@@ -634,4 +641,28 @@ nav .fa-solid{
   margin-top: 2px;
   display:block;
 }
+/* Skill Table******************************************** */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
 
