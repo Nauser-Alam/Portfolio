@@ -479,3 +479,13 @@ h2.sub-title {
 .close-btn:hover {
   color: #bbb;
 }
+/* *************  Contact  ************ */
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+  margin-top: 30px;
+}
