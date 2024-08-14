@@ -485,6 +485,7 @@ h2.sub-title {
 }
 .contact-right{
   flex-basis: 60%;
+ 
 }
 .contact-left p{
   margin-top: 30px;
@@ -509,4 +510,58 @@ h2.sub-title {
 .social-icons a:hover{
   color:#008ab0;
   transform: translateY(-5px);
+}
+.btn.btn2{
+  display: inline-block;
+  background: #008ab0;
+  text-decoration: none;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin-top: 30px;
+  color:#fff;
+  border-radius: 8px;
+  transition: transform 0.1s;
+}
+.btn.btn2:hover{
+  
+  transform: scale(1.05);
+}
+.contact-right form{
+  width:100%;
+}
+form input, form textarea{
+  width:100%;
+  border:0;
+  outline:none;
+  background:#262626;
+  padding:15px;
+  margin:15px 0;
+  color:#fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn.btn2{
+  margin-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 7px;
+  font-size: medium;
+  border: #016682 solid;
+}
+.copyright{
+  width:100%;
+  text-align:center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top:20px;
+}
+
+/* ------------------------ for Mobile version------------------------ */
+@media only screen and (max-width: 600px){
+  #header{
+    background-image: url(images/phone.png);
+  }
+  
 }
