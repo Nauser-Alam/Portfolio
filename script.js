@@ -57,7 +57,7 @@ function closePopup() {
 // script.js
 
 let slideIndex = 0;
-const slideInterval = 2000; // 2 seconds
+const slideInterval = 4000; // 2 seconds
 
 function showSlides() {
     const slides = document.querySelector('.certificate-track');
