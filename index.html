@@ -101,7 +101,7 @@
 <!-- ********************  My works  **************  -->
 <div id="projects">
   <div class="container">
-  <h2>My Projects/Works</h2>
+  <h2 class="sub-title">My Projects/Works</h2>
   <div class="project-slider">
       <div class="project-item" onclick="openPopup('video1')">
           <img src="images/studymasalaa.jpg" alt="Project 1">
@@ -147,6 +147,37 @@
       <video id="video2" src="images/archery.mp4" controls></video>
       <video id="video3" src="images/archery.mp4" controls></video>
       <!-- Add more videos as needed -->
+  </div>
+</div>
+<!-- *************** Certificates and Achievements*************** -->
+<div id="certificates">
+  <div class="container">
+  <h2 clsss="sub-title">Certificates and Achievements</h2>
+  <div class="certificate-grid">
+      <div class="certificate-item" onclick="openModal('cert1')">
+          <img src="cert1-thumbnail.jpg" alt="Certificate 1">
+          <p>Certificate in Web Development</p>
+      </div>
+      <div class="certificate-item" onclick="openModal('cert2')">
+          <img src="cert2-thumbnail.jpg" alt="Certificate 2">
+          <p>Certificate in Data Structures</p>
+      </div>
+      <div class="certificate-item" onclick="openModal('cert3')">
+          <img src="cert3-thumbnail.jpg" alt="Certificate 3">
+          <p>Certificate in JavaScript Programming</p>
+      </div>
+      <!-- Add more certificate items as needed -->
+  </div>
+</div>
+</div>
+
+<div id="certificate-modal" class="modal">
+  <span class="close-btn" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+      <img id="cert1" src="cert1.jpg" alt="Certificate 1">
+      <img id="cert2" src="cert2.jpg" alt="Certificate 2">
+      <img id="cert3" src="cert3.jpg" alt="Certificate 3">
+      <!-- Add more certificates as needed -->
   </div>
 </div>
   <script src="script.js"></script>
