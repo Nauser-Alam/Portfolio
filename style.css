@@ -350,46 +350,79 @@ nav ul li a{
   color: #bbb;
 }
 /********************* Certificate Grid *************************/
-#certificates {
-  padding: 20px;
+/* styles.css */
+
+h2.sub-title {
+  font-size: 50px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  margin-bottom: 20px;
 }
 
-.certificate-grid {
+/* Certificate Slider */
+#certificates {
+  padding: 20px;
+  background-color:#080808; /* Adjust to match your design */
+}
+
+.certificate-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificate-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .certificate-item {
-  flex: 0 1 300px;
+  flex: 0 0 auto;
+  width: 300px; /* Adjust width as needed */
+  margin: 10px;
+  cursor: pointer;
   text-align: center;
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
   border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
 }
 
 .certificate-item img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s;
   border-radius: 5px;
-}
-
-.certificate-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .certificate-item p {
   margin-top: 10px;
   font-size: 1.1em;
   color: #555;
+}
+
+/* Indicator Container */
+.indicator-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #aaa;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: #333;
 }
 
 /* Modal */

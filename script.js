@@ -54,34 +54,73 @@ function closePopup() {
 // ******************** Achievement and certificate section****************
 // script.js
 
+// script.js
+
+let slideIndex = 0;
+const slideInterval = 2000; // 2 seconds
+
+function showSlides() {
+    const slides = document.querySelector('.certificate-track');
+    const items = document.querySelectorAll('.certificate-item');
+    const totalItems = items.length;
+    const indicators = document.querySelectorAll('.indicator');
+
+    slideIndex++;
+    if (slideIndex >= totalItems) { slideIndex = 0; }
+    
+    slides.style.transform = `translateX(-${slideIndex * 320}px)`; // 320px = item width + margin
+
+    // Update the indicators
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === slideIndex);
+    });
+
+    setTimeout(showSlides, slideInterval);
+}
+
 function openModal(certId) {
-  const modal = document.getElementById('certificate-modal');
-  const certificates = document.querySelectorAll('.modal-content img');
+    const modal = document.getElementById('certificate-modal');
+    const certificates = document.querySelectorAll('.modal-content img');
 
-  // Hide all certificates
-  certificates.forEach(cert => {
-      cert.style.display = 'none';
-  });
+    // Hide all certificates
+    certificates.forEach(cert => {
+        cert.style.display = 'none';
+    });
 
-  // Show the selected certificate
-  const selectedCert = document.getElementById(certId);
-  if (selectedCert) {
-      selectedCert.style.display = 'block';
-  }
+    // Show the selected certificate
+    const selectedCert = document.getElementById(certId);
+    if (selectedCert) {
+        selectedCert.style.display = 'block';
+    }
 
-  // Show the modal
-  modal.style.display = 'flex';
+    // Show the modal
+    modal.style.display = 'flex';
 }
 
 function closeModal() {
-  const modal = document.getElementById('certificate-modal');
-  const certificates = document.querySelectorAll('.modal-content img');
+    const modal = document.getElementById('certificate-modal');
+    const certificates = document.querySelectorAll('.modal-content img');
 
-  // Hide the modal
-  modal.style.display = 'none';
+    // Hide the modal
+    modal.style.display = 'none';
 
-  // Hide all certificates
-  certificates.forEach(cert => {
-      cert.style.display = 'none';
-  });
+    // Hide all certificates
+    certificates.forEach(cert => {
+        cert.style.display = 'none';
+    });
 }
+
+// Initialize the sliding effect and indicators
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.certificate-item');
+    const indicatorContainer = document.querySelector('.indicator-container');
+
+    // Create indicators
+    items.forEach((_, index) => {
+        const indicator = document.createElement('span');
+        indicator.className = 'indicator';
+        indicatorContainer.appendChild(indicator);
+    });
+
+    showSlides();
+});
